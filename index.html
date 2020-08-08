@@ -68,7 +68,7 @@ th {
 				var start = new Date(yyyy,mm1-1,dd1,0,0,0,0);
 				var slut  = new Date(yyyy,mm2-1,dd2,0,0,0,0);
 				
-				var text = titel + " - fra" + start.getDate() + "/" + (start.getMonth() +1) + "-" + start.getFullYear();
+				var text = titel + " - fra " + start.getDate() + "/" + (start.getMonth() +1) + "-" + start.getFullYear();
 				text = text + " til " + slut.getDate() + "/" + (slut.getMonth() +1) + "-" + slut.getFullYear();
 				
 				if(today.toJSON() >= start.toJSON() && today.toJSON() < slut.toJSON()){
