@@ -70,7 +70,7 @@ th {
 				
 				text = text + " " + start.getDate() + "/" + (start.getMonth() +1) + "-" + start.getFullYear();
 				
-				if(today.toJSON() >= start.toJSON()){
+				if(today.toJSON() >= start.toJSON() && today.toJSON() < slut.toJSON()){
 					document.write("<p>" + text.fontcolor("red") + "</p>");	
 				}else{
 					document.write("<p>" + text + "</p>");					
