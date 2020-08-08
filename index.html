@@ -55,9 +55,10 @@ th {
 				var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 				var yyyy = today.getFullYear();
 
-				today = "D." + dd + "/" + mm + "-" + yyyy;
+				today = "Dato i dag: D." + dd + "/" + mm + "-" + yyyy;
+			 
 
-				document.write("<p> Dato i dag: " + text.fontcolor("red") + " " + today.fontcolor("red") + "</p>");	
+				document.write("<p>" + today.fontcolor("red") + "</p>");	
 			}
 			
 			
