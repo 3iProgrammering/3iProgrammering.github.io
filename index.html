@@ -48,17 +48,16 @@ th {
     <i class="fa fa-remove"></i>
   </a>
 		<script>
-			var today = new Date();
-			var dd = String(today.getDate()).padStart(2, '0');
-			var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-			var yyyy = today.getFullYear();
-
-			today = "Dag: " + dd + " Måned: " + mm + " År : " + yyyy;
-			today.fontcolor("red");
-			document.write("<p>"+today.fontcolor("red")+"</p>");	
 			
-			function forlob(dd,mm,yyyy){
-				document.write("<p>"+today.fontcolor("red")+"</p>");	
+			function forlob(text,dd,mm,yyyy){
+				var today = new Date();
+				var dd = String(today.getDate()).padStart(2, '0');
+				var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+				var yyyy = today.getFullYear();
+
+				today = "Dag: " + dd + " Måned: " + mm + " År : " + yyyy;
+
+				document.write("<p>" + text.fontcolor("red") + " " + today.fontcolor("red") + "</p>");	
 			}
 			
 		</script>	
@@ -71,6 +70,7 @@ th {
 	<a class="w3-bar-item w3-button w3-hover-black" href="#3G">Indhold 3G</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="#kernestof3G"><i> - Kernestof i 3G</i></a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="#forlob3G"><i> - Forløb i 3G</i></a>
+	<script>forlob("Dato i dag - ",20,8,2020);</script>
 </nav >
 
 <!-- Overlay effect when opening sidebar on small screens -->
