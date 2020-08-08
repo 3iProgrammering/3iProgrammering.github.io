@@ -62,15 +62,19 @@ th {
 			}
 			
 			
-			function forlob(text,dd,mm,yyyy,dd1,mm2){
+			function forlob(text,dd1,mm1,dd2,mm2,yyyy){
 				var today = new Date();
-				var dd = String(today.getDate()).padStart(2, '0');
-				var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-				var yyyy = today.getFullYear();
-
-				today = "D." + dd + "/" + mm + "-" + yyyy;
-
-				document.write("<p>" + text.fontcolor("red") + " " + today.fontcolor("red") + "</p>");	
+				today.setHours(0,0,0);
+				var start = new Date(yyyy,mm1,dd1,0,0,0,0);
+				var slut  = new Date(yyyy,mm2,dd2,0,0,0,0);
+				
+				text = text + " " + start;
+				
+				if(today.toJSON() >= start.toJSON){
+					document.write("<p>" + text.fontcolor("red") + "</p>");	
+				}else{
+					document.write("<p>" + text + "</p>");					
+				}
 			}
 			
 		</script>	
@@ -274,7 +278,7 @@ th {
     		<div class="w3-twothird w3-container">
       			<h3 class="w3-text-teal">Forløb i 3G</h3>
 
-			<h5 class="w3-text-teal"><script>forlob("Årsprøveprojektet V 2.0 - ",8,8,2020,17,8)</script></h5>
+			<h5 class="w3-text-teal"><script>forlob("Årsprøveprojektet V 2.0 - ",8,8,17,8,2020)</script></h5>
 					Dette miniforløb er vores første forløb i 3G. Formålet er at i skal finde jeres egne fejl i årsprøven fra sidste år,
 					og lave en endnu bedre besvarelse (det er i de fleste tilfælde muligt).
 					<table >
