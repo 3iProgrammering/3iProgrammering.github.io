@@ -53,12 +53,12 @@ th {
 			var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 			var yyyy = today.getFullYear();
 
-			today = mm + '/' + dd + '/' + yyyy;
+			today = "Dag: " + dd + " Måned: " + mm + " År : " + yyyy;
 			today.fontcolor("red");
-			document.write(today);	
+			document.write("<p>"+today.fontcolor("red")+"</p>");	
 			
 			function forlob(dd,mm,yyyy){
-				document.write("Dag: " + dd + " Måned: " + mm + " År : " + yyyy);	
+				document.write("<p>"+today.fontcolor("red")+"</p>");	
 			}
 			
 		</script>	
