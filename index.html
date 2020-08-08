@@ -47,6 +47,16 @@ th {
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
+		<script>
+			var today = new Date();
+			var dd = String(today.getDate()).padStart(2, '0');
+			var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+			var yyyy = today.getFullYear();
+
+			today = mm + '/' + dd + '/' + yyyy;
+			document.write(today);	
+		</script>	
+	
   <h4 class="w3-bar-item"><b>Indhold</b></h4>
   	<a class="w3-bar-item w3-button w3-hover-black" href="#velkommen">Velkommen</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="#2G">Indhold 2G</a>
