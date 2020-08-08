@@ -68,7 +68,7 @@ th {
 				var start = new Date(yyyy,mm1-1,dd1,0,0,0,0);
 				var slut  = new Date(yyyy,mm2-1,dd2,0,0,0,0);
 				
-				text = text + " " + start.getDay() + "/" + (start.getMonth() +1) + "-" + start.getFullYear();
+				text = text + " " + start.getDate() + "/" + (start.getMonth() +1) + "-" + start.getFullYear();
 				
 				if(today.toJSON() >= start.toJSON()){
 					document.write("<p>" + text.fontcolor("red") + "</p>");	
