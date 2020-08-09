@@ -1,0 +1,25 @@
+Dato:       Onsdag d.12/8 
+
+Tid:        Modul 1, 08:15 til 09:15
+            Modul 2, 09:20 til 10:20
+      
+Titel:      Intro & Retning af 2G årsprøven
+
+Materiale:  årsprøve_programmering_b.zip (alle opgaver)
+            og Egen kode
+            og internet søgning
+            
+Opgave:     Vi gennemgårpgaveteksten sammen; 
+
+            1.) Gå sammen mindste 2 personer.
+            2.) Vælg en af jeres afleverede besvarelser, og vurder denne ud fra følgende kriterier:
+                - Er der afleveret det der kan kræves i opgaven  ?
+                - Virker programmet efter hensigten ?
+                - Anvender programmet et meningsfuldt objektorienteret design ?
+                - Er der anvendt "Clean Code" ?
+            3.) De fejl i finder i jeres program skal rettes.
+            
+            4.) Gentag 1 til 3 for med den anden persons aflevering
+            
+Evaluering: 2 tilfældige personer bliver valgt til at fremlægge deres nye løsning klokken ca 10:00
+            
