@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Programmering 3i - 2020/2021 - H.C. Ørsted Lyngby</title>
+<meta charset="UTF-8">
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">	
+	
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Allerta Stencil", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+table,td {
+  border-spacing: 8px;
+  vertical-align: top;
+  text-align: left;
+}
+table {
+  border: 1px solid #dddddd;
+}
+th {
+  background-color: #dddddd;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+	    <a href="#" class="w3-bar-item w3-button w3-theme-l1">Programmering 3i - 20/21</a>
+
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+		<script>
+			
+			function dato(){
+				var today = new Date();
+				var dd = String(today.getDate()).padStart(2, '0');
+				var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+				var yyyy = today.getFullYear();
+
+				today = "Dato i dag: D." + dd + "/" + mm + "-" + yyyy;
+			 
+
+				document.write("<p>" + today.fontcolor("red") + "</p>");	
+			}
+			
+			
+			function forlob(titel,dd1,mm1,dd2,mm2,yyyy){
+				var today = new Date();
+				today.setHours(0,0,0);
+				var start = new Date(yyyy,mm1-1,dd1,0,0,0,0);
+				var slut  = new Date(yyyy,mm2-1,dd2,0,0,0,0);
+				
+				var text = titel + " - fra " + start.getDate() + "/" + (start.getMonth() +1) + "-" + start.getFullYear();
+				text = text + " til " + slut.getDate() + "/" + (slut.getMonth() +1) + "-" + slut.getFullYear();
+				
+				if(today.toJSON() >= start.toJSON() && today.toJSON() < slut.toJSON()){
+					text = "Igangværende projekt </br>" + text;
+					document.write("<p>" + text.fontcolor("red") + "</p>");	
+				}else{
+					document.write("<p>" + text + "</p>");					
+				}
+			}
+			
+		</script>	
+	
+  <h4 class="w3-bar-item"><b>Indhold</b></h4>
+  	<a class="w3-bar-item w3-button w3-hover-black" href="#velkommen">Velkommen</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#2G">Indhold 2G</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#kernestof3G"><i> - Kernestof i 2G</i></a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#forlob2G"><i> - Forløb i 2G</i></a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#3G">Indhold 3G</a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#kernestof3G"><i> - Kernestof i 3G</i></a>
+	<a class="w3-bar-item w3-button w3-hover-black" href="#forlob3G"><i> - Forløb i 3G</i></a>
+	<a class="w3-bar-item w3-button w3-hover-black" href=""><script>dato();</script></a>
+</nav >
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+
+
+
+  <div class="w3-row w3-padding-64" id="velkommen">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Velkommen</h1>
+		<p>
+			Velkommen til Programmering 3i. 
+      Dette website indeholder information om diverse fagligemål, kernestof, meteriale og studieplan for holdet "Programmering 3i år 2020/2021".
+      Hvis der er noget du ikke forstår eller synes mangler er du mere end velkommen til at kontakte underviseren Anders Petersen, på mail ajrp@tec.dk.  
+		</p>
+    </div>
+  </div>
+	
+<!-- DETTE ER 2G INHOLD ............................................................................................................................... -->
+
+
+  <div class="w3-row w3-padding-64" id="2G">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Indhold 2G</h1>
+	    
+
+    </div>
+  </div>
+
+	    
+	    	      <div class="w3-row w3-padding-64" id="forlob2G">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Forløb i 2G</h3>
+		<h5 class="w3-text-teal">OOP-Poster - D.17/2 til D.5/3 2020</h5>
+	    	<table>
+		<tr>
+		<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th>
+		</tr>
+		<tr>
+		<td>D.19/3</td>
+		<td><a href="https://youtu.be/3W35Gl_KmWQ">Video: Aflutning tilretning af posters</a></td>
+		<td><a href="2G/OOP_Posters/FORLØB - _OBJEKT ORIENTERET PROGRAMMERINGS POSTERS - HA_NDBOG.pdf">Posters grupper</a></td>
+	    	</tr>
+	  	</table>
+	  	
+	    	<h5 class="w3-text-teal">Processing med IntelliJ - D.6/3 til D.29/3 2020</h5>
+	    	<table >
+		<tr>
+		<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th>
+		</tr>
+		<tr><td>D.24/3</td><td><a href="https://youtu.be/FSK2y8ShGsY">Del. 1 Om Processing med IntelliJ</a></td></tr>
+	    	<tr><td>D.24/3</td><td><a href="https://youtu.be/gMzuTSELgPY">Del. 2 Opgaven</a></td></tr>
+		<tr><td>D.24/3</td><td><a href="https://youtu.be/AW3wyoQmLvg">Del. 3 Løsning</a></td></tr>
+	    	<tr><td>D.25/3</td><td><a href="https://youtu.be/fqifMFBLLoA">Fravær</a></td></tr>
+	    	<tr>
+		<td>D.26/3</td><td><a href="https://youtu.be/jXC2HJI1Fg0">Maven</a></td>
+		<td>	
+			<a href="2G/Maven/pom.xml">pom.xml</a> , 
+			<a href="2G/Maven/Fa_ Processing i IntelliJ med Maven _-).pdf">Maven vejledning</a>
+		</td>
+		</tr>
+	    	</table>
+		
+		<h5 class="w3-text-teal">GUI-lib lavet i IntelliJ - D.30/3 til D.5/5 2020</h5>
+		<table>
+		<tr>
+		<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th>
+		</tr>
+
+		<tr>
+		<td>D.?/?</td>
+		<td><a href=""></a></td>
+	    	</tr>
+	  	</table>
+	    
+	    
+<!-- 2i PRO ..... SRC PRO START................. ------------------------->
+ 	    
+		<h5 class="w3-text-teal">SO5 - Studie Retnings Case- Skrivnings forløb - D.4/5 til D.17/5 2020</h5>
+		<table>
+		<tr>
+		<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th>
+		</tr>
+
+		<tr>
+		<td>D.?/?</td>
+		<td><a href=""></a></td>
+	    	</tr>
+	  	</table>
+	    
+		<h5 class="w3-text-teal">SO5 - Studie Retnings Case- Mundtligt forløb - D.18/5 til D.25/5 2020</h5>
+		<table>
+		<tr>
+		<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th>
+		</tr>
+
+		<tr>
+		<td>D.?/?</td>
+		<td><a href=""></a></td>
+	    	</tr>
+	  	</table>
+	    	
+<!-- 2i PRO ..... XML FORLØB................. ------------------------->
+
+	    
+	    	<h5 class="w3-text-teal">XML- forløb - D.20/5 til D.29/5 2020</h5>
+		<table>
+		<tr>
+		<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th>
+		</tr>
+
+		<tr>
+		<td>D.?/?</td>
+		<td><a href=""></a></td>
+	    	</tr>
+	  	</table>
+	    
+<!-- 2i PRO ..... ÅRSPRØVE ................. ------------------------->
+
+		<h5 class="w3-text-teal">ÅRSPRØVE PROGRAMMERING - Aflevering d 17/6 2020</h5>
+		<table>
+		<tr>
+		<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th>
+		</tr>
+
+		<tr>
+		<td>D.?/?</td>
+		<td><a href=""></a></td>
+	    	</tr>
+	  	</table>
+	    
+	    
+	        </div>
+  </div>
+	    
+	    
+<!-- DETTE ER 3G INHOLD ............................................................................................................................... -->
+
+  <div class="w3-row w3-padding-64" id="3G">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Indhold 3G</h1>
+	    
+	    <p>Velkommen til 3G. Grundlæggende programmering er nu noget i kan i søvne, i kender alt til for og while loops, 
+		    if statements, variable, datatyper scopes og funtioner. Hvis man ikke er stærk i dette må man ty til selvstudie.</br>
+	  	Det sidste år fokuserer vi på Hovedsageligt OOP, Rapportskrivning og kigger lidt på algoritmer. </p>
+
+	    
+    </div>
+  </div>
+	
+	
+	
+<!-- DETTE ER KERNESTOF I 3G .................-->
+	    
+	      <div class="w3-row w3-padding-64" id="kernestof3G">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">Kernestof i 3G</h3>
+	    <p>Man skal selvfølgelig ikke glemme alt det kernestof man har lært i 2G det er klart. Det forventes at man kan og bruger alt det man har lært i 2G, 
+		    men derudover lærer og bruger det nye stof man får præsenteret i 3G.</br>
+		      Her følger en liste over det nye stof vi skal lære i 3G:</br></p>
+	  <ul>
+  		
+		  <li><u>Obejktorient programmering</u>,- dette er et stort emne, og vi kommer fortsat til at bruge meget tid på oop.
+		  Her følger de vigtigste underemner:</li>
+		      	<ul>
+      				<li>Klasser og Objekter,- hvad er forskellen og funktion?</li>
+      				<li>Indkapsling,- hvad er et godt desig af en klasse</li>
+				<li>Nedarving, hvad og hvordan bruges det</li>
+				<li>Polymorfi</li>
+    			</ul>
+		  <li><u>Interaktion imellem systemer</u>,- vi kigger på databasers og databasers interaktion med et program</li>
+		  <li><u>Biblioteker og generiske dele</u>,- dette emne dækkes af vores GUI-bibliotek, som vi bygger videre på<li>
+		  <li><u>Abstrakt dokumentation</u>,- vi øver os mere på at skrive rapporter og diverse diagrammer til at illustrere vores programmer.
+		  <li><u>Algoritmer</u>,- forklaring kommer</li>
+		  <li><u>Rekursion</u>,- forklaring kommer</li>
+	</ul>  
+
+    </div>
+  </div>
+	
+<!-- DETTE ER FORLØBS OVERSIGT I 3G .................-->
+	
+	<div class="w3-row w3-padding-64" id="forlob3G">
+    		<div class="w3-twothird w3-container">
+      			<h3 class="w3-text-teal">Forløb i 3G</h3>
+
+			<h5 class="w3-text-teal"><script>forlob("Årsprøveprojektet V 2.0 - ",8,8,17,8,2020)</script></h5>
+					Dette miniforløb er vores første forløb i 3G. Formålet er at i skal finde jeres egne fejl i årsprøven fra sidste år,
+					og lave en endnu bedre besvarelse (det er i de fleste tilfælde muligt).
+					<table >
+					<tr>
+					<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th><th style="width: 300px">Formål</th>
+					</tr>
+
+					<tr>
+					<td></td>
+					<td><a href=""></a></td>
+					<td><a href=""></a></td>
+						<td><i>Klasser og Objekter</i>, <i>Indkapsling</i></td>
+					</tr>
+					</table>
+
+				<h5 class="w3-text-teal">Posters V 2.0</h5>
+					Vores posters fra sidste år blev aldrig hængt op. Men det gør ikke så meget, nu prøver vi forfra, med lidt mere overordnede
+					kategorier også nogle indenfor basal programmering.</br>
+					Det overordnede formål med dette forløb er et overblik over alt kendt kernestof. 
+					<table >
+					<tr>
+					<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th><th style="width: 300px">Formål</th>
+					</tr>
+
+					<tr>
+					<td></td>
+					<td><a href=""></a></td>
+					<td><a href=""></a></td>
+						<td><i>Overblik over kendt kernestof</i></td>
+					</tr>
+					</table>
+
+				<h5 class="w3-text-teal">Data visualisering & Med GUI bibliotek</h5>
+					Vi arbejder videre på GUI-bibliteket og forsøger at bruge det til at visualisere noget data fra en CSV fil.  
+					<table >
+					<tr>
+					<th>Dato</th><th style="width: 300px">Video</th><th style="width: 300px">Materiale</th><th style="width: 300px">Formål</th>
+					</tr>
+
+					<tr>
+					<td></td>
+					<td><a href=""></a></td>
+					<td><a href=""></a></td>
+						<td><i>Datavisualisering</i>,<i>Generiske dele og Bibliotek</i></td>
+					</tr>
+					</table>
+	    
+	    
+
+    		</div>
+	</div>
+	
+	    
+	    
+	
+	
+	
+
+
+
+  <!-- Pagination -->
+  <!-- div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div-->
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l2 w3-padding-32">
+      <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kontakt : Anders Petersen - ajrp@tec.dk</h4>
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
