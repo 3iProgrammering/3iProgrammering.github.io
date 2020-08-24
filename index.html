@@ -2,13 +2,13 @@
 <html lang="en">
 <title>Programmering 3i - 2020/2021 - H.C. Ørsted Lyngby</title>
 <meta charset="UTF-8">
-	
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">	
-	
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
-	
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Allerta Stencil", sans-serif;}
@@ -20,16 +20,22 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Allerta Stencil", sans-serif;}
   height: inherit;
 }
 table,td {
-  border-spacing: 2px;
+  border-spacing: 10px;
   vertical-align: top;
   text-align: left;
-  border: 1px solid #dddddd;
+
+  /*border: 1px solid #dddddd;*/
 }
 table {
-  border: 1px solid #dddddd;
+ /*border: 1px solid #dddddd;*/
 }
 th {
-  background-color: #dddddd;
+	vertical-align: top;
+	text-align: left;
+  /*background-color: #dddddd;*/
+}
+td{
+	background-color: #F3F2F2;
 }
 a {
   background-color: #f3f4fb;
@@ -52,7 +58,7 @@ a {
     <i class="fa fa-remove"></i>
   </a>
 		<script>
-			
+
 			function dato(){
 				var today = new Date();
 				var dd = String(today.getDate()).padStart(2, '0');
@@ -60,37 +66,37 @@ a {
 				var yyyy = today.getFullYear();
 
 				today = "Dato i dag: D." + dd + "/" + mm + "-" + yyyy;
-			 
 
-				document.write("<p>" + today.fontcolor("red") + "</p>");	
+
+				document.write("<p>" + today.fontcolor("red") + "</p>");
 			}
-			
-			
+
+
 			function forlob(titel,dd1,mm1,dd2,mm2,yyyy){
 				var today = new Date();
 				today.setHours(0,0,0);
 				var start = new Date(yyyy,mm1-1,dd1,0,0,0,0);
 				var slut  = new Date(yyyy,mm2-1,dd2,0,0,0,0);
-				
+
 				var text = titel + " - fra " + start.getDate() + "/" + (start.getMonth() +1) + "-" + start.getFullYear();
 				text = text + " til " + slut.getDate() + "/" + (slut.getMonth() +1) + "-" + slut.getFullYear();
-				
+
 				if(today.toJSON() >= start.toJSON() && today.toJSON() < slut.toJSON()){
 					text = "Igangværende projekt </br>" + text;
-					document.write("<p>" + text.fontcolor("red") + "</p>");	
+					document.write("<p>" + text.fontcolor("red") + "</p>");
 				}else{
-					document.write("<p>" + text + "</p>");					
+					document.write("<p>" + text + "</p>");
 				}
 			}
-			
-		</script>	
-	
+
+		</script>
+
   <h4 class="w3-bar-item"><b>Indhold</b></h4>
   	<a class="w3-bar-item w3-button w3-hover-black" href="#velkommen">Velkommen</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="#clean">Gode vaner</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="#vaerktoj">Værktøjer & Sprog</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="#undervisningsmateriale">Undervisningsmateriale</a>
-	<a class="w3-bar-item w3-button w3-hover-black" href="#kernestof">Kernestof</a>	
+	<a class="w3-bar-item w3-button w3-hover-black" href="#kernestof">Kernestof</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="#forlob">Forløb</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href="index2G.html" style="background:lightblue">Gå til 2G 2019/2020</a>
 	<a class="w3-bar-item w3-button w3-hover-black" href=""><script>dato();</script></a>
@@ -110,15 +116,15 @@ a {
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Velkommen</h1>
 		<p>
-		Velkommen til Programmering 3i.</br> 
+		Velkommen til Programmering 3i.</br>
       		Dette website indeholder information om diverse fagligemål, kernestof, materiale og studieplan for holdet "Programmering 3i år 2020/2021 og 2019/2020".</br>
-      		Hvis der er noget du ikke forstår eller synes mangler er du mere end velkommen til at kontakte mig mail ajrp@tec.dk.  
+      		Hvis der er noget du ikke forstår eller synes mangler er du mere end velkommen til at kontakte mig mail ajrp@tec.dk.
 		</p>
     </div>
   </div>
-	
-	    
-	
+
+
+
 <!-- .....................................................................GODE VANER.........................................................-->
 	<div class="w3-row w3-padding-64" id="clean">
     <div class="w3-twothird w3-container">
@@ -128,13 +134,13 @@ a {
 		Ulæselig og grim kode er farlig kode! Det er svært at lave ændringer og nemt at lav fejl.</br>
 		Den optimale kode er "Clean Code"; kode der er så enkel og letforståelig, at man ikke behøver nogen forklaring.
 		Vi arbejder med følgende tre gode vaner, der automatisk gør koden mere "clean":
-		
+
 		<ul>
 			<li>God navngivning</li>
 			<li>DRY: Dont repeat yourself</li>
 			<li>KISS: Keep it simple stupid</li>
 	    	</ul>
-	    	
+
 	    	</p>
     </div>
   </div>
@@ -144,42 +150,42 @@ a {
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Værktøjer & Sprog</h1>
 	<p>
-	
+
 	Nedenfor ses en liste over links til værktøjer vi bruger i faget:
-		
-			
-	<h5 class="w3-text-teal">Processing</h5>	
+
+
+	<h5 class="w3-text-teal">Processing</h5>
 	    	Udviklingsmiljø til sproget Processing,- en forenkling af Java.</br></br>
-			
+
 			<ul>
 			<li><a href="https://processing.org/download/">Download Processing her</a></li>
 			</ul>
-	    
 
-	<h5 class="w3-text-teal">GitHub</h5>	
+
+	<h5 class="w3-text-teal">GitHub</h5>
 	    	Online platform til versions styring af kode. Et gratis og populært valg.</br>
 		Virker ved, at du har et såkaldt git-repository til et kode-projekt på din computer og en kopi på github.
-		
+
 			<ul>
 			<li><a href="https://github.com/">SignUp på GitHub her</a></li>
 			</ul>
 
-	<h5 class="w3-text-teal">GitHub Desktop</h5>	
+	<h5 class="w3-text-teal">GitHub Desktop</h5>
 	    	Program til kommunikation med GitHub.
-			
+
 			<ul>
 			</li><a href="https://desktop.github.com/">Download Github Desktop her</a></li>
 			</ul>
 
-	<h5 class="w3-text-teal">IntelliJ</h5>	
-		IntelliJ er en af de mest populære IDE'er i softwareindustrien.</br> 
+	<h5 class="w3-text-teal">IntelliJ</h5>
+		IntelliJ er en af de mest populære IDE'er i softwareindustrien.</br>
 		Man kan downloade "intelliJ Community" gratis. Så er det muligt at skrive ren Java med Processing som et bibliotek.</br>
 		Dette er primært et værktøj for 3G.</br>
-		
+
 		Vigtigt: Kun kompatibel med Java version 8 build 202:
 		(se mere info her: <a href="https://github.com/processing/processing/wiki/Build-Instructions">processing/wiki/Build-Instructions</a>)</br>
 		Vigtigt: Du skal også installere Processing som et bibliotek.
-		
+
 			<ul>
 			<li><a href="https://desktop.github.com/">Download IntelliJ her</a></li>
 	    		<li><a href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html">Download Java 8 build 202</a></li>
@@ -189,54 +195,54 @@ a {
     </div>
   </div>
 
-<!-- .............................................................UNDERVISNINGSMATERIALE..........................................................-->	
+<!-- .............................................................UNDERVISNINGSMATERIALE..........................................................-->
 	<div class="w3-row w3-padding-64" id="undervisningsmateriale">
     <div class="w3-twothird w3-container">
 	    <h1 class="w3-text-teal">Undervisnings-</br>Materialer</h1>
 	    	<p>
 			Vi bruger ikke nogen lærebog kun online-materiale (måske ændrer det sig).</b>
 			Nedenfor ses en oversigt over vores undervisningsmateriale:
-		
+
 		<ul>
 			<li><a href="http://learningprocessing.com/videos/">Bogen "Learning Processing" som videoer</a></li>
 	    	</ul>
-	    	
+
 	    	</p>
     </div>
   </div>
-	
-	
-<!-- DETTE ER KERNESTOF I 3G .................-->
-	    
+
+
+<!--.............................................................DETTE ER KERNESTOF I 3G .........................................................-->
+
 	      <div class="w3-row w3-padding-64" id="kernestof">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Kernestof</h1>
-	   	<p>	
+	   	<p>
 		Det forventes, at man stadig kan og bruger alt det man har lært i 2G.</br>
 		</p>
-	
-	
+
+
 		<p>
 		Kernestof i 3G:</br>
 		</p>
-	  	
+
 			<ul>
-			
+
 			<li>
 			Objektorient programmering:</br>
 			<i>Vi kommer til at bruge meget tid på OOP. Her følger de vigtigste underemner:</i></li>
-		      	
+
 			<ul>
       				<li>Klasser og Objekter</li>
       				<li>Indkapsling</li>
 				<li>Nedarving</li>
 				<li>Polymorfi</li>
     			</ul>
-		  	
+
 			<li>Interaktion imellem systemer:</br>
 			<i>Databasers og database interaktion.</i></li>
-			
-			<li>Biblioteker og generiske dele:</br> 
+
+			<li>Biblioteker og generiske dele:</br>
 			<i>Dette emne dækkes af vores GUI-bibliotek.</i></li>
 
 			<li>Abstrakt dokumentation:</br>
@@ -253,35 +259,37 @@ a {
 			<p>
 			Kernestof fra 2G:</br>
 			</p>
-			
+
 			<ul>
 				<li>Vælg "Gå til 2G 2019/2020" i menuen til venstre</li>
 			</ul>
 
     </div>
   </div>
-	
-<!-- DETTE ER FORLØBS OVERSIGT I 3G .................-->
-	
+
+<!--................................................ DETTE ER FORLØBS OVERSIGT I 3G ..............................................................-->
+
 	<div class="w3-row w3-padding-64" id="forlob">
     		<div class="w3-twothird w3-container">
-      			<h1 class="w3-text-teal">Forløb i 3G</13>
+      			<h1 class="w3-text-teal">Forløb i 3G</h1>
 
-<!-- REP. AF ÅRSPRØVEN - FORLØBET ................................................-->
+<!--..................................... REP. AF ÅRSPRØVEN - FORLØBET ..........................-->
 
-			<h5 class="w3-text-teal"><script>forlob("Årsprøveprojektet V 2.0 - ",8,8,16,8,2020)</script></h5>
-					Dette miniforløb er vores første forløb i 3G. Formålet er at i skal finde jeres egne fejl i årsprøven fra sidste år,
-					og lave en endnu bedre besvarelse (det er i de fleste tilfælde muligt).
-					
+
 					<table>
+						<tr><th colspan = "2"><h5 class="w3-text-teal"><script>forlob("Årsprøveprojektet V 2.0 - ",8,8,16,8,2020)</script></h5>
+							Dette miniforløb er vores første forløb i 3G. Formålet er at i skal finde jeres egne fejl i årsprøven fra sidste år,
+							og lave en endnu bedre besvarelse (det er i de fleste tilfælde muligt).
+						</th></tr>
+
 						<tr>
-							<th>Dato:</th>
-							<th>Onsdag d.12/8</th>
+							<th  style="width: 100"></th>
+							<th > Dato: Onsdag d.12/8</th>
 						</tr>
 						<tr>
 							<th>Materiale:</th>
-							<td>	
-								<a href="3G/ret_aarsprove_opgave.txt">ret_aarsprove_opgave.txt</a></br> 
+							<td>
+								<a href="3G/ret_aarsprove_opgave.txt">ret_aarsprove_opgave.txt</a></br>
 								<a href="3G/Årsprøve_Programmering_B.zip">Årsprøve_Programmering_B.zip</a>
 							</td>
 						</tr>
@@ -293,16 +301,16 @@ a {
 							<th>Evaluering:</th>
 							<td></td>
 						</tr>
-					</table>
 
-					<table>
+
+
 						<tr>
-							<th>Dato:</th>
-							<th>Torsdag d.13/8</th>
+							<th></th>
+							<th>Dato: Torsdag d.13/8</th>
 						</tr>
 						<tr>
 							<th>Materiale:</th>
-							<td>	
+							<td>
 							</td>
 						</tr>
 						<tr>
@@ -313,22 +321,25 @@ a {
 							<th>Evaluering:</th>
 							<td>Mindst en præsenterer sin årsprøve ved tavlen</td>
 						</tr>
-					</table>
-			
-<!-- MANGE TING DER KAN FLYVE - FORLØBET ................................................-->			
+
+
+<!-- ...............................MANGE TING DER KAN FLYVE - FORLØBET ..................................-->
+
+			<tr><th colspan = "2">
 
 			<h5 class="w3-text-teal"><script>forlob("Mange Ting der Flyver - ",16,8,25,8,2020)</script></h5>
 				Opgaven er at få nogle "ting" til at bevæge sig rundt på skærmen. Når musen rør dem skal de ændre farve.</br>
 				I får udleveret noget kode der i skal færdigskrive.</br>
-				Lidt mere repetition i : Objekter, for-loops og lister</br>
-				
+				Lidt mere repetition i : Objekter, for-loops og lister</br></br>
+
+			</th></tr>
 
 
-			
-					<table>
+
+
 						<tr>
-							<th>Dato:</th>
-							<th>	Mandag d.17/8</th>
+							<th   style="width: 100"></th>
+							<th >	</br>Dato: Mandag d.17/8 -  Lektion 1 </th>
 						</tr>
 						<tr>
 							<th>Materiale:</th>
@@ -343,50 +354,40 @@ a {
 						</tr>
 						<tr>
 							<th>Evaluering:</th>
-							<td>	Aflever repo-link (gitHub): D.25/8</br> 
+							<td>	Aflever repo-link (gitHub): D.25/8</br>
 								Mindst 4 opgaver i Array-1 & Mindst 4 opgaver i Array-2</br>
 								En teksfil pr. løsning, samme navn som opgaven</td>
 						</tr>
+
+
+
+
+						<tr>
+							<th></th>
+							<th >	</br>	Dato: Mandag d.17/8 - Lektion 2 </th>
+						</tr>
+						<tr>
+							<th>Materiale:</th>
+							<td>
+									<a href="https://youtu.be/kAr7vVi_99Q">Youtube video om projekt-opgaven!!</a></br>
+									<a href="3G/Forlob_MangeTingDerFlyver/Main.java">Main.java</a></br>
+									<a href="3G/Forlob_MangeTingDerFlyver/Ting.java">Ting.java</a></br>
+									<a href="3G/Forlob_MangeTingDerFlyver/pom.xml">pom.xml</a>
+							</td>
+						</tr>
+						<tr>
+							<th>Formål:</th>
+							<td>	Forstå  metode og styrke i kombination af: objekter, arrays og loops</td>
+						</tr>
+						<tr>
+							<th>Evaluering:</th>
+							<td>Aflevere Dokument + Hele Koden: D.25/8 </br>
+									Dokumentet skal indeholde: </br>
+								1.) Forklaring til løsning af hver opgave</br>
+								2.) Forklaring til test af hver opgave</td>
+						</tr>
 					</table>
 
-				
-					<table >
-					<tr>
-					<th>Dato</th>
-					<th style="width: 300px">Materiale</th>
-					<th style="width: 300px">Formål</th>
-					<th style="width: 300px">Evaluering</th>
-					</tr>
-
-						
-						
-					<tr>
-					<td>Mandag d.17/8 - Modul 2</td>
-					<td>
-						<a href="https://youtu.be/kAr7vVi_99Q">Youtube video om projekt-opgaven!!</a></br>
-						<a href="3G/Forlob_MangeTingDerFlyver/Main.java">Main.java</a></br>
-						<a href="3G/Forlob_MangeTingDerFlyver/Ting.java">Ting.java</a></br>
-						<a href="3G/Forlob_MangeTingDerFlyver/pom.xml">pom.xml</a></td>
-					<td>	Kombination af objekter, arrays og loops</td>
-					<td>	Aflevere Dokument + Hele Koden: D.25/8 </br>
-						Dokumentet skal indeholde: </br>
-						1.) Forklaring til løsning af hver opgave</br>
-						2.) Forklaring til test af hver opgave</td>
-					</tr>
-
-				
-	
-						
-					</table>
-			
-			
-			
-			
-			
-			
-			
-			
-			
 
 				<h5 class="w3-text-teal">Nye Posters (denne gang kommer de op)</h5>
 					<table >
@@ -419,17 +420,17 @@ a {
 					<td></td>
 					</tr>
 					</table>
-	    
-	    
+
+
 
     		</div>
 	</div>
-	
-	    
-	    
-	
-	
-	
+
+
+
+
+
+
 
 
 
